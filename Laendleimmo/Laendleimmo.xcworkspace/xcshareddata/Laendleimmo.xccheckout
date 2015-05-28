@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C67BB4AE-5AAE-4006-ABFD-9F3657714FEB</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Laendleimmo</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>2F9C1D790938D3584729DF19F32C4AC72219BBDE</key>
+		<string>https://github.com/piyush-russmediatech/Laendleimmo_Redesign.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Laendleimmo/Laendleimmo.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>2F9C1D790938D3584729DF19F32C4AC72219BBDE</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/piyush-russmediatech/Laendleimmo_Redesign.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>2F9C1D790938D3584729DF19F32C4AC72219BBDE</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>2F9C1D790938D3584729DF19F32C4AC72219BBDE</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Laendleimmo_Redesign</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -8,17 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		2514C9D51AF8CCDC00697AEB /* temp1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2514C9D41AF8CCDC00697AEB /* temp1@2x.png */; };
+		252591F51B0F0B4500C58DF4 /* ListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 252591F41B0F0B4500C58DF4 /* ListCell.m */; };
+		252591FA1B0F343200C58DF4 /* ListAd.m in Sources */ = {isa = PBXBuildFile; fileRef = 252591F91B0F343200C58DF4 /* ListAd.m */; };
+		2546552C1B09AD6100AA0DDC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2546552B1B09AD6100AA0DDC /* ViewController.m */; };
 		2599F3531AFCC0AB0098EB15 /* DetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2599F3521AFCC0AB0098EB15 /* DetailVC.m */; };
 		259AB7E71AF351AA009DC18C /* SearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 259AB7E61AF351AA009DC18C /* SearchVC.m */; };
 		259AB7EA1AF351C0009DC18C /* MyAccountVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 259AB7E91AF351C0009DC18C /* MyAccountVC.m */; };
 		259AB7ED1AF351DD009DC18C /* AboutUsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 259AB7EC1AF351DD009DC18C /* AboutUsVC.m */; };
 		25B4FAE91AF1F77C005B2933 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B4FAE81AF1F77C005B2933 /* main.m */; };
 		25B4FAEC1AF1F77C005B2933 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B4FAEB1AF1F77C005B2933 /* AppDelegate.m */; };
-		25B4FAEF1AF1F77C005B2933 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B4FAEE1AF1F77C005B2933 /* ViewController.m */; };
 		25B4FAF21AF1F77C005B2933 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25B4FAF01AF1F77C005B2933 /* Main.storyboard */; };
 		25B4FAF41AF1F77C005B2933 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25B4FAF31AF1F77C005B2933 /* Images.xcassets */; };
 		25B4FAF71AF1F77C005B2933 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25B4FAF51AF1F77C005B2933 /* LaunchScreen.xib */; };
 		25B4FB031AF1F77C005B2933 /* LaendleimmoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B4FB021AF1F77C005B2933 /* LaendleimmoTests.m */; };
+		25DE46491B0DB721001FD28D /* HelveticaNeueLTPro-Md.otf in Resources */ = {isa = PBXBuildFile; fileRef = 25DE46471B0DB721001FD28D /* HelveticaNeueLTPro-Md.otf */; };
+		25DE464A1B0DB721001FD28D /* HelveticaNeueLTPro-Roman.otf in Resources */ = {isa = PBXBuildFile; fileRef = 25DE46481B0DB721001FD28D /* HelveticaNeueLTPro-Roman.otf */; };
 		6A456FFC76E074E2FDDE06EB /* libPods-Laendleimmo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64401423C586977FEC6B7D3B /* libPods-Laendleimmo.a */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +38,12 @@
 
 /* Begin PBXFileReference section */
 		2514C9D41AF8CCDC00697AEB /* temp1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "temp1@2x.png"; sourceTree = "<group>"; };
+		252591F11B0EF4D700C58DF4 /* APIList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIList.h; sourceTree = "<group>"; };
+		252591F31B0F0B4500C58DF4 /* ListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListCell.h; sourceTree = "<group>"; };
+		252591F41B0F0B4500C58DF4 /* ListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListCell.m; sourceTree = "<group>"; };
+		252591F81B0F343200C58DF4 /* ListAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListAd.h; sourceTree = "<group>"; };
+		252591F91B0F343200C58DF4 /* ListAd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListAd.m; sourceTree = "<group>"; };
+		2546552B1B09AD6100AA0DDC /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		2599F3511AFCC0AB0098EB15 /* DetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailVC.h; sourceTree = "<group>"; };
 		2599F3521AFCC0AB0098EB15 /* DetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailVC.m; sourceTree = "<group>"; };
 		259AB7E51AF351AA009DC18C /* SearchVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchVC.h; sourceTree = "<group>"; };
@@ -48,7 +58,6 @@
 		25B4FAEA1AF1F77C005B2933 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		25B4FAEB1AF1F77C005B2933 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		25B4FAED1AF1F77C005B2933 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		25B4FAEE1AF1F77C005B2933 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = "/Users/Piyush08/Desktop/try/Re/New Design/Laendleimmo/Laendleimmo/ViewController.m"; sourceTree = "<absolute>"; };
 		25B4FAF11AF1F77C005B2933 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		25B4FAF31AF1F77C005B2933 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		25B4FAF61AF1F77C005B2933 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -56,6 +65,8 @@
 		25B4FB011AF1F77C005B2933 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		25B4FB021AF1F77C005B2933 /* LaendleimmoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LaendleimmoTests.m; sourceTree = "<group>"; };
 		25B546991AFA2A04004AF1D6 /* MacroSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacroSetting.h; sourceTree = "<group>"; };
+		25DE46471B0DB721001FD28D /* HelveticaNeueLTPro-Md.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HelveticaNeueLTPro-Md.otf"; sourceTree = "<group>"; };
+		25DE46481B0DB721001FD28D /* HelveticaNeueLTPro-Roman.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HelveticaNeueLTPro-Roman.otf"; sourceTree = "<group>"; };
 		64401423C586977FEC6B7D3B /* libPods-Laendleimmo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Laendleimmo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6646C74A5401413D2A107D9A /* Pods-Laendleimmo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Laendleimmo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Laendleimmo/Pods-Laendleimmo.debug.xcconfig"; sourceTree = "<group>"; };
 		F26353D38DE375E4A42E222C /* Pods-Laendleimmo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Laendleimmo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Laendleimmo/Pods-Laendleimmo.release.xcconfig"; sourceTree = "<group>"; };
@@ -88,9 +99,28 @@
 			path = TempImages;
 			sourceTree = "<group>";
 		};
+		252591F21B0F0B2300C58DF4 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				252591F31B0F0B4500C58DF4 /* ListCell.h */,
+				252591F41B0F0B4500C58DF4 /* ListCell.m */,
+			);
+			path = CustomCell;
+			sourceTree = "<group>";
+		};
+		252591F71B0F332000C58DF4 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				252591F81B0F343200C58DF4 /* ListAd.h */,
+				252591F91B0F343200C58DF4 /* ListAd.m */,
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
 		259AB7E41AF3517A009DC18C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				252591F21B0F0B2300C58DF4 /* CustomCell */,
 				259AB7E51AF351AA009DC18C /* SearchVC.h */,
 				259AB7E61AF351AA009DC18C /* SearchVC.m */,
 				259AB7E81AF351C0009DC18C /* MyAccountVC.h */,
@@ -136,10 +166,13 @@
 				25B4FAEA1AF1F77C005B2933 /* AppDelegate.h */,
 				25B4FAEB1AF1F77C005B2933 /* AppDelegate.m */,
 				25B546991AFA2A04004AF1D6 /* MacroSetting.h */,
+				252591F11B0EF4D700C58DF4 /* APIList.h */,
 				25B4FAED1AF1F77C005B2933 /* ViewController.h */,
-				25B4FAEE1AF1F77C005B2933 /* ViewController.m */,
+				2546552B1B09AD6100AA0DDC /* ViewController.m */,
+				25DE46461B0DB721001FD28D /* CustomFont */,
 				2514C9D31AF8CCDC00697AEB /* TempImages */,
 				259AB7F81AF37C08009DC18C /* Extra Classes */,
+				252591F71B0F332000C58DF4 /* Modal */,
 				259AB7E41AF3517A009DC18C /* Classes */,
 				25B4FAF01AF1F77C005B2933 /* Main.storyboard */,
 				25B4FAF31AF1F77C005B2933 /* Images.xcassets */,
@@ -173,6 +206,15 @@
 				25B4FB011AF1F77C005B2933 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		25DE46461B0DB721001FD28D /* CustomFont */ = {
+			isa = PBXGroup;
+			children = (
+				25DE46471B0DB721001FD28D /* HelveticaNeueLTPro-Md.otf */,
+				25DE46481B0DB721001FD28D /* HelveticaNeueLTPro-Roman.otf */,
+			);
+			path = CustomFont;
 			sourceTree = "<group>";
 		};
 		6F1FB74B1353AF0960A451ED /* Pods */ = {
@@ -276,6 +318,8 @@
 			files = (
 				2514C9D51AF8CCDC00697AEB /* temp1@2x.png in Resources */,
 				25B4FAF21AF1F77C005B2933 /* Main.storyboard in Resources */,
+				25DE464A1B0DB721001FD28D /* HelveticaNeueLTPro-Roman.otf in Resources */,
+				25DE46491B0DB721001FD28D /* HelveticaNeueLTPro-Md.otf in Resources */,
 				25B4FAF71AF1F77C005B2933 /* LaunchScreen.xib in Resources */,
 				25B4FAF41AF1F77C005B2933 /* Images.xcassets in Resources */,
 			);
@@ -328,8 +372,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2546552C1B09AD6100AA0DDC /* ViewController.m in Sources */,
+				252591F51B0F0B4500C58DF4 /* ListCell.m in Sources */,
 				259AB7E71AF351AA009DC18C /* SearchVC.m in Sources */,
-				25B4FAEF1AF1F77C005B2933 /* ViewController.m in Sources */,
+				252591FA1B0F343200C58DF4 /* ListAd.m in Sources */,
 				25B4FAEC1AF1F77C005B2933 /* AppDelegate.m in Sources */,
 				2599F3531AFCC0AB0098EB15 /* DetailVC.m in Sources */,
 				259AB7EA1AF351C0009DC18C /* MyAccountVC.m in Sources */,

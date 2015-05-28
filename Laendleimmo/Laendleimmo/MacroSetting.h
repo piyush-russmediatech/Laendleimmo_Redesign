@@ -38,4 +38,16 @@
 #define RGBA(r, g, b, a) \
 [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
 
+
+
+#pragma mark - NSlog
+//Only NSLog() in DEBUG mode, if logging is enabled
+#ifdef DEBUG
+#   define PSLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#else
+#   define PSLog(...)
+#endif
+
+
+
 #endif

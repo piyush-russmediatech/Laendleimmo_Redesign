@@ -3,6 +3,7 @@ platform :ios, "7.0"
 
 target 'Laendleimmo' do
 pod 'SVPullToRefresh'
+pod 'UIActivityIndicator-for-SDWebImage'
 end
 
 target 'LaendleimmoTests' do

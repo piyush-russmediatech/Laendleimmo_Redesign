@@ -4,7 +4,17 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-Laendleimmo-SDWebImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Laendleimmo-SVPullToRefresh.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Laendleimmo-UIActivityIndicator-for-SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -17,12 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>4B7E9F8F4178BE4F768A0497</key>
+		<key>605A4392D96D4124A0D91812</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>51FAAD8B62EB768AF4BAA072</key>
+		<key>71F917FBB9A802A2AB2C2D41</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BA8520344445021B6894F3C0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C319CA8DB2F1645A9D84A590</key>
 		<dict>
 			<key>primary</key>
 			<true/>

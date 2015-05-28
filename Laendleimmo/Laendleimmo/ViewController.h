@@ -9,12 +9,14 @@
 #import <UIKit/UIKit.h>
 
 
-@interface ViewController : UIViewController <UITableViewDataSource,UITableViewDelegate,UIGestureRecognizerDelegate>{
+@interface ViewController : UIViewController <UITableViewDataSource,UITableViewDelegate,UIGestureRecognizerDelegate,UISearchBarDelegate>{
 
 
     BOOL isopen;
    IBOutlet NSLayoutConstraint *menu_height;
+    IBOutlet UILabel *l;
     
+    NSMutableArray *arr_data;
 }
 @property (nonatomic, retain)IBOutlet UIView *menu;
 @property (nonatomic, retain)IBOutlet UITableView *tbl;

@@ -10,7 +10,10 @@
 
 #import "SVPullToRefresh.h"
 #import "MacroSetting.h"
-
+#import "APIList.h"
+#import "ListCell.h"
+#import "ListAd.h"
+#import <UIImageView+UIActivityIndicatorForSDWebImage.h>
 @interface ViewController ()
 
 @end
@@ -24,6 +27,8 @@
      isopen = NO;
     menu_height.constant=0.0f;
     _menu.clipsToBounds = YES;
+    
+    arr_data=[[NSMutableArray alloc]init];
     
     //  SVPllToRefresh 
     __weak ViewController *weakSelf = self;
@@ -45,6 +50,10 @@
     }];
 
     //  SVPllToRefresh 
+    
+    
+    [self getTop_Property];
+    
   
 }
 - (void)viewDidLoad {
@@ -57,14 +66,23 @@
     self.navigationController.navigationBar.backIndicatorImage = [UIImage imageNamed:@"back.png"];
     self.navigationController.navigationBar.backIndicatorTransitionMaskImage = [UIImage imageNamed:@"back.png"];
     
+    //to disable swipe feature of navigation
     if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
         
         self.navigationController.interactivePopGestureRecognizer.enabled = NO;
         self.navigationController.interactivePopGestureRecognizer.delegate = self;
         
     }
+}
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
     
+    [[UIBarButtonItem appearanceWhenContainedIn:[UISearchBar class], nil]
+     setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName, nil]
+     forState:UIControlStateNormal]; // set searchbar button title as white color
+
 }
 
 #pragma mark - Gesture Regonizer Delegate
@@ -135,7 +153,7 @@
      */
     
     if (!isopen){
-    menu_height.constant = 241;
+    menu_height.constant = 242.0f;
         isopen=YES;
     }
     else{
@@ -150,10 +168,41 @@
 
 }
 
+#pragma mark -  API 
+-(void)getTop_Property
+{
+    NSURL *url=[NSURL URLWithString:TopProperty];
+    
+    NSURLSession *session = [NSURLSession sharedSession];
+    [[session dataTaskWithURL:url
+            completionHandler:^(NSData *data,
+                                NSURLResponse *response,
+                                NSError *error) {
+                // handle response
+                if(!error){
+                NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+                PSLog(@"%@", dict);
+                if (dict) {
+                    
+                    for (int i=0; i<[[dict objectForKey:@"search_result"]count]; i++) {
+                      
+                        ListAd *ad=[[ListAd alloc]initWithDict:[[dict objectForKey:@"search_result"]objectAtIndex:i]];
+                        [arr_data addObject:ad];
+                    }
+                    
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        
+                        [_tbl reloadData];
+                    });
+                }
+                }
+            }] resume];
+}
+
 #pragma mark - TAbleView DataSource & Delegate
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
+    return arr_data.count;
 }
 
 -(NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
@@ -163,17 +212,42 @@
 
 -(UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *cellId = @"Cell";
+    static NSString *cellIdentifier = @"Cell";
     
-    UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellId];
+    ListCell *cell=(ListCell*)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
-    if (!cell) {
-        cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
+    if (!cell)
+        cell=(ListCell*)[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+    
+    
+    ListAd *ad=[arr_data objectAtIndex:indexPath.row];
+    
+    PSLog(@"%@",[NSURL URLWithString:ad.img_url]);
+    [cell.img sd_setImageWithURL:[NSURL URLWithString:ad.img_url] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        
+        
+    }];
+    
+    cell.lbl_title.text=ad.title;
+    cell.lbl_location.text=[NSString stringWithFormat:@"%@ %@ , %@",ad.area,ad.city, ad.country];
+    [cell.btn_imageCount setTitle:[NSString stringWithFormat:@"%ld",ad.ImageCount] forState:UIControlStateNormal];
+    //cell.lbl_imageCount.text=[NSString stringWithFormat:@"%ld",ad.ImageCount];
+    
+    if (IS_IPHONE_4_AND_OLDER || IS_IPHONE_5)
+        cell.lbl_property_width.constant=250.0f;
+
+    if (ad.RoomsCount!=0){
+        cell.lbl_property.text=[NSString stringWithFormat:@"%@     |    %.2f m²    |    %ld Zimmer    |",ad.price, ad.LivingSpace,ad.RoomsCount];
+        
+    if (IS_IPHONE_4_AND_OLDER || IS_IPHONE_5)
+        cell.lbl_property.text=[NSString stringWithFormat:@"%@  |  %.2f m²  |  %ld Zimmer  |",ad.price, ad.LivingSpace,ad.RoomsCount];
     }
+    else
+        cell.lbl_property.text=[NSString stringWithFormat:@"%@     |    %.2f m²    |",ad.price, ad.LivingSpace];
     
     return cell;
-    
 }
+
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     // setup initial state (e.g. before animation)
@@ -190,6 +264,42 @@
     cell.alpha = 1;
     cell.layer.transform = CATransform3DIdentity;
     [UIView commitAnimations];
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //  Close Menu dropdown if it is open 
+    if(isopen){
+        menu_height.constant = 0;
+        isopen=NO;
+        [UIView animateWithDuration:0.3 animations:^{
+            [self.view layoutIfNeeded];
+        }];
+
+    }
+      else
+    [self performSegueWithIdentifier:@"movetodetail" sender:nil];
+}
+
+#pragma mark - SearchBar Delegate
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar
+{
+    [searchBar setShowsCancelButton:YES animated:YES];
+}
+
+-(void)searchBarTextDidEndEditing:(UISearchBar *)searchBar
+{
+    [searchBar setShowsCancelButton:NO animated:YES];
+}
+
+-(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    [searchBar resignFirstResponder];
+}
+
+-(void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
+{
+    [searchBar resignFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning {

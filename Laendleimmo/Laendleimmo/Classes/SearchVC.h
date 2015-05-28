@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface SearchVC : UIViewController
-<UIGestureRecognizerDelegate>
+<UIGestureRecognizerDelegate,UISearchBarDelegate>
 
 @property (nonatomic, retain)IBOutlet UISearchBar *searchBar;
 @property (nonatomic, retain)IBOutlet UISlider *slider;
